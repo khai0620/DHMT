@@ -100,11 +100,11 @@ region = Rect2(48, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ml2vg"]
 atlas = ExtResource("2_lxe7w")
-region = Rect2(0, 144, 48, 48)
+region = Rect2(0, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v7nc"]
 atlas = ExtResource("2_lxe7w")
-region = Rect2(48, 144, 48, 48)
+region = Rect2(48, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwtr1"]
 atlas = ExtResource("1_vycco")
@@ -405,8 +405,6 @@ current_tool = 2
 position = Vector2(1, -8)
 sprite_frames = SubResource("SpriteFrames_1xs8a")
 animation = &"tilling_right"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946542843]
 position = Vector2(0, -3)
