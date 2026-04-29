@@ -401,7 +401,10 @@ radius = 4.0
 radius = 3.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1300715306]
+<<<<<<< HEAD
 y_sort_enabled = true
+=======
+>>>>>>> 4af9f8d (Đàn gà)
 collision_layer = 3
 script = ExtResource("1_i6ujd")
 
