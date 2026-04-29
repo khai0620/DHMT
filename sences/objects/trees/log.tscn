@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://dou8nrfus7wvc"]
 
 [ext_resource type="PackedScene" uid="uid://cfofsy2omtwua" path="res://sences/components/collectable_component.tscn" id="1_cfrs6"]
-<<<<<<< HEAD
-=======
-[ext_resource type="Script" uid="uid://c1irtat8hfw4h" path="res://sences/components/collectable_component.gd" id="2_42tdl"]
->>>>>>> 4af9f8d (Đàn gà)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ow7d"]
 load_path = "res://.godot/imported/basic_grass_biom_things.png-b9e8c76380a5e8af6195679336eb71c0.ctex"
@@ -13,7 +9,6 @@ load_path = "res://.godot/imported/basic_grass_biom_things.png-b9e8c76380a5e8af6
 atlas = SubResource("CompressedTexture2D_7ow7d")
 region = Rect2(80, 32, 16, 16)
 
-<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0h6"]
 size = Vector2(13, 7)
 
@@ -27,18 +22,4 @@ collectable_name = "log"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable Component" unique_id=516151082]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_sn0h6")
-=======
-[sub_resource type="CircleShape2D" id="CircleShape2D_5hbro"]
-radius = 8.0
-
-[node name="Log" type="Sprite2D" unique_id=372291078]
-texture = SubResource("AtlasTexture_ytm30")
-
-[node name="Collectable Component" parent="." unique_id=1146891428 instance=ExtResource("1_cfrs6")]
-script = ExtResource("2_42tdl")
-collectable_name = "log"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable Component" unique_id=516151082]
-shape = SubResource("CircleShape2D_5hbro")
->>>>>>> 4af9f8d (Đàn gà)
 debug_color = Color(5.7756904e-07, 0.65129286, 0.048538066, 0.41960785)

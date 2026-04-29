@@ -51,6 +51,14 @@ region = Rect2(0, 336, 48, 48)
 atlas = ExtResource("2_lxe7w")
 region = Rect2(48, 336, 48, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3lj5"]
+atlas = ExtResource("2_lxe7w")
+region = Rect2(0, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5dxl"]
+atlas = ExtResource("2_lxe7w")
+region = Rect2(48, 192, 48, 48)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxe7w"]
 atlas = ExtResource("1_vycco")
 region = Rect2(0, 0, 48, 48)
@@ -223,6 +231,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8gkuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3lj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5dxl")
 }],
 "loop": false,
 "name": &"chopping_right",
@@ -401,10 +415,7 @@ radius = 4.0
 radius = 3.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1300715306]
-<<<<<<< HEAD
 y_sort_enabled = true
-=======
->>>>>>> 4af9f8d (Đàn gà)
 collision_layer = 3
 script = ExtResource("1_i6ujd")
 
