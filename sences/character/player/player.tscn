@@ -51,14 +51,6 @@ region = Rect2(0, 336, 48, 48)
 atlas = ExtResource("2_lxe7w")
 region = Rect2(48, 336, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n3lj5"]
-atlas = ExtResource("2_lxe7w")
-region = Rect2(0, 192, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t5dxl"]
-atlas = ExtResource("2_lxe7w")
-region = Rect2(48, 192, 48, 48)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxe7w"]
 atlas = ExtResource("1_vycco")
 region = Rect2(0, 0, 48, 48)
@@ -231,12 +223,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8gkuk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n3lj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t5dxl")
 }],
 "loop": false,
 "name": &"chopping_right",
@@ -422,7 +408,7 @@ script = ExtResource("1_i6ujd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=184808114]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_1xs8a")
-animation = &"chopping_right"
+animation = &"chopping_back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946542843]
 position = Vector2(0, -4)
