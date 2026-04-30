@@ -409,7 +409,7 @@ current_tool = 1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=184808114]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_1xs8a")
-animation = &"chopping_back"
+animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946542843]
 position = Vector2(0, -4)
