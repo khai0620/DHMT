@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bh3np2ae0p4xf"]
+
+[ext_resource type="Script" uid="uid://dhnkm3uaniwqu" path="res://sences/objects/rocks/rock.gd" id="1_5kaqq"]
+[ext_resource type="Shader" uid="uid://3kcd2ygl8pm5" path="res://sences/objects/rocks/shake.gdshader" id="1_gfgom"]
+[ext_resource type="PackedScene" uid="uid://dc2kyy8r3scrr" path="res://sences/components/hurt_component.tscn" id="2_gfgom"]
+[ext_resource type="PackedScene" uid="uid://drq62eqchkamb" path="res://sences/components/damage_component.tscn" id="3_i76n8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i76n8"]
+resource_local_to_scene = true
+shader = ExtResource("1_gfgom")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_my2xt"]
+load_path = "res://.godot/imported/basic_grass_biom_things.png-b9e8c76380a5e8af6195679336eb71c0.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8m2u"]
+atlas = SubResource("CompressedTexture2D_my2xt")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2oohh"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hir6"]
+radius = 7.071068
+
+[node name="Rock" type="Sprite2D" unique_id=883219520]
+material = SubResource("ShaderMaterial_i76n8")
+position = Vector2(0, -2)
+texture = SubResource("AtlasTexture_w8m2u")
+script = ExtResource("1_5kaqq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1444200168]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1392808042]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_2oohh")
+
+[node name="HurtComponent" parent="." unique_id=1542131617 instance=ExtResource("2_gfgom")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=518666672]
+shape = SubResource("CircleShape2D_6hir6")
+debug_color = Color(0.8939896, 0.00022217154, 0.7841597, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=2123481586 instance=ExtResource("3_i76n8")]
+max_damage = 5

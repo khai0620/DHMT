@@ -4,6 +4,28 @@
 [ext_resource type="PackedScene" uid="uid://dc2kyy8r3scrr" path="res://sences/components/hurt_component.tscn" id="2_qc2qo"]
 [ext_resource type="PackedScene" uid="uid://drq62eqchkamb" path="res://sences/components/damage_component.tscn" id="3_m5klg"]
 
+[sub_resource type="Shader" id="Shader_lgepi"]
+code = "shader_type canvas_item;
+
+uniform float shake_intensity = 0.0;
+uniform float shake_speed = 20.0;
+
+void vertex() {
+	vec2 shake = vec2(0.0);
+	
+	if(VERTEX.y < 0.0) {
+		shake.x = sin(TIME * shake_speed + VERTEX.y) * shake_intensity;
+	}
+	VERTEX.xy += shake;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m5klg"]
+resource_local_to_scene = true
+shader = SubResource("Shader_lgepi")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bn708"]
 load_path = "res://.godot/imported/basic_grass_biom_things.png-b9e8c76380a5e8af6195679336eb71c0.ctex"
 
@@ -18,6 +40,7 @@ radius = 4.0
 size = Vector2(10, 20)
 
 [node name="SmallTree" type="Sprite2D" unique_id=1069036018]
+material = SubResource("ShaderMaterial_m5klg")
 position = Vector2(0, -10)
 texture = SubResource("AtlasTexture_l58o5")
 script = ExtResource("1_oavav")
@@ -29,6 +52,7 @@ position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_aaer3")
 
 [node name="HurtComponent" parent="." unique_id=1542131617 instance=ExtResource("2_qc2qo")]
+tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=478563372]
 shape = SubResource("RectangleShape2D_j5mb4")
