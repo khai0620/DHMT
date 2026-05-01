@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 ToolManager="*uid://c3bicox61b2vs"
 InventoryManager="*uid://o4qstsqr1you"
+GameManager="*uid://d168d6fu46rly"
+SceneManager="*uid://dxm3u46846u2v"
 
 [display]
 

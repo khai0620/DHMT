@@ -14,6 +14,54 @@ texture_margin_top = 7.338238
 texture_margin_right = 7.0504637
 texture_margin_bottom = 7.482124
 
+[sub_resource type="SystemFont" id="SystemFont_wbewp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wbewp"]
+load_path = "res://.godot/imported/Basic_sprite.png-24159bdee2fb2c444dcbc8938f1ec430.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx2mb"]
+atlas = SubResource("CompressedTexture2D_wbewp")
+region = Rect2(11, 11, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ynjd"]
+texture = SubResource("AtlasTexture_nx2mb")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lhpe4"]
+texture = SubResource("AtlasTexture_nx2mb")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndv72"]
+texture = SubResource("AtlasTexture_nx2mb")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqpqe"]
+atlas = ExtResource("1_v6v0t")
+region = Rect2(11, 155, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nicc"]
+texture = SubResource("AtlasTexture_kqpqe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdiiq"]
+texture = SubResource("AtlasTexture_nx2mb")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6v0t"]
 atlas = ExtResource("1_v6v0t")
 region = Rect2(107, 59, 26, 26)
@@ -54,11 +102,20 @@ region_rect = Rect2(0, -1, 26, 28)
 [resource]
 DarkWoodPanels/base_type = &"PanelContainer"
 DarkWoodPanels/styles/panel = SubResource("StyleBoxTexture_nx2mb")
+GameMenuButton/base_type = &"Button"
+GameMenuButton/font_sizes/font_size = 18
+GameMenuButton/fonts/font = SubResource("SystemFont_wbewp")
+GameMenuButton/styles/disabled = SubResource("StyleBoxTexture_0ynjd")
+GameMenuButton/styles/focus = SubResource("StyleBoxTexture_lhpe4")
+GameMenuButton/styles/hover = SubResource("StyleBoxTexture_ndv72")
+GameMenuButton/styles/normal = SubResource("StyleBoxTexture_8nicc")
+GameMenuButton/styles/pressed = SubResource("StyleBoxTexture_mdiiq")
 InventoryItemPanel/base_type = &"PanelContainer"
 InventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_wbewp")
 InventoryLabel/base_type = &"Label"
 InventoryLabel/font_sizes/font_size = 8
 InventoryLabel/fonts/font = ExtResource("2_wbewp")
+Label/fonts/font = null
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
