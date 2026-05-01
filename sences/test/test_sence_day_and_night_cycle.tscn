@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://jekq4a4far20"]
 
+[ext_resource type="PackedScene" uid="uid://dcmdr0arf5pok" path="res://sences/components/day_night_cycle_component.tscn" id="1_carc6"]
 [ext_resource type="TileSet" uid="uid://dljyms6537hjq" path="res://tilesets/game_tile_set.tres" id="1_f2cwn"]
 [ext_resource type="PackedScene" uid="uid://ctlqjno1ksm3f" path="res://sences/character/player/player.tscn" id="2_carc6"]
 [ext_resource type="PackedScene" uid="uid://d1oecr7di53m6" path="res://sences/UI/game_screen.tscn" id="3_7insa"]
@@ -7,6 +8,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3te3a"]
 
 [node name="TestSenceDayandNightCycle" type="Node2D" unique_id=1889616262]
+
+[node name="DayNightCycleComponent" parent="." unique_id=83071900 instance=ExtResource("1_carc6")]
+initial_day = 6
+initial_hour = 14
+initial_minute = 18
 
 [node name="gameMap" type="Node2D" parent="." unique_id=1495272040]
 
