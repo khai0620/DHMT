@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://c6ytjspjb1dd3" path="res://sences/UI/game_ui_theme.tres" id="1_rd1s1"]
 [ext_resource type="Texture2D" uid="uid://nh8buoybb2uc" path="res://assets/UI/Basic_sprite.png" id="2_ma53n"]
+[ext_resource type="Script" uid="uid://j5b2w3ixrli0" path="res://sences/UI/dayand_night_panel.gd" id="2_nb32l"]
+[ext_resource type="Script" uid="uid://70i0vf5yldds" path="res://sences/UI/normal_speed_button.gd" id="3_n5ucu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63r44"]
 atlas = ExtResource("2_ma53n")
@@ -11,6 +13,7 @@ region = Rect2(261, 2, 7, 12)
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_rd1s1")
+script = ExtResource("2_nb32l")
 
 [node name="Daypanel" type="PanelContainer" parent="." unique_id=599293819]
 layout_mode = 0
@@ -25,7 +28,7 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="Label" type="Label" parent="Daypanel/MarginContainer" unique_id=680286875]
+[node name="DayLabel" type="Label" parent="Daypanel/MarginContainer" unique_id=680286875]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"DayandNightLabel"
@@ -45,11 +48,11 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="Label" type="Label" parent="TimePanel/MarginContainer" unique_id=2110038326]
+[node name="TimeLabel" type="Label" parent="TimePanel/MarginContainer" unique_id=2110038326]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"DayandNightLabel"
-text = "12:00"
+text = "00	:00"
 
 [node name="Control" type="Control" parent="." unique_id=405450628]
 anchors_preset = 0
@@ -62,6 +65,7 @@ layout_mode = 0
 offset_right = 26.0
 offset_bottom = 18.0
 theme_type_variation = &"DayandNightButton"
+script = ExtResource("3_n5ucu")
 
 [node name="TextureRect" type="TextureRect" parent="Control/NormalSpeedButton" unique_id=840653835]
 layout_mode = 1
@@ -165,3 +169,7 @@ offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_63r44")
+
+[connection signal="pressed" from="Control/NormalSpeedButton" to="." method="_on_normal_speed_button_pressed"]
+[connection signal="pressed" from="Control/FastSpeedButton" to="." method="_on_fast_speed_button_pressed"]
+[connection signal="pressed" from="Control/CheetahSpeedButton" to="." method="_on_cheetah_speed_button_pressed"]

@@ -10,11 +10,11 @@ extends Control
 func _ready() -> void:
 	DayAndNightCycleManager.time_tick.connect(on_time_tick)
 	
-
-
+	
 func on_time_tick(day: int, hour: int, minute: int) -> void:
-	day_label.text = "Day " + str(day)
-	time_label.text = "%02d:%02d" % [hour, minute]
+	day_label.text = "Day" +str(day)
+	time_label.text = "%02d:%02d" % [hour , minute]
+
 
 func _on_normal_speed_button_pressed() -> void:
 	DayAndNightCycleManager.game_speed = normal_speed

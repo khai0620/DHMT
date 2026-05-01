@@ -10,9 +10,7 @@
 [node name="TestSenceDayandNightCycle" type="Node2D" unique_id=1889616262]
 
 [node name="DayNightCycleComponent" parent="." unique_id=83071900 instance=ExtResource("1_carc6")]
-initial_day = 6
-initial_hour = 14
-initial_minute = 18
+script = null
 
 [node name="gameMap" type="Node2D" parent="." unique_id=1495272040]
 
