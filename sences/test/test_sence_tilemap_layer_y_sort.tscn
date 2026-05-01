@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bh3np2ae0p4xf" path="res://sences/objects/rocks/rock.tscn" id="6_swxut"]
 [ext_resource type="Texture2D" uid="uid://bttsdhfc2gtd8" path="res://assets/Tilesets/tilled_dirt_wide.png" id="7_4bd6k"]
 [ext_resource type="Texture2D" uid="uid://clv5vo81y6nvi" path="res://assets/Objects/basic_grass_biom things 1.png" id="8_b2wo5"]
+[ext_resource type="PackedScene" uid="uid://cnb68cuejau0t" path="res://sences/objects/corn.tscn" id="9_iih5a"]
 [ext_resource type="PackedScene" uid="uid://ctlqjno1ksm3f" path="res://sences/character/player/player.tscn" id="9_opf6v"]
+[ext_resource type="PackedScene" uid="uid://d38lae65lujun" path="res://sences/objects/tomato.tscn" id="10_pkvo6"]
+[ext_resource type="PackedScene" uid="uid://d1oecr7di53m6" path="res://sences/UI/game_screen.tscn" id="12_swxut"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqkes"]
 texture = ExtResource("2_ldmcg")
@@ -546,7 +549,24 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAPAAoABAADAAAAAAAUAAoABAADAAAAAAASAAkABAAIAAIAAAANAA4ABAADAAIAAAAMAAwABAAEAAIAAAAMAAkABAAFAAIAAAANAAgABAAFAAAAAAARAAsABAAFAAAAAAAOAAwABAAGAAAAAAAQAA4ABAAGAAAAAAAWAAwABAADAAAAAAAMAAYABAADAAAAAAATAAgABAAFAAMAAAAVAA0ABAAFAAMAAAA=")
 tile_set = SubResource("TileSet_swxut")
 
+[node name="Crops" type="Node2D" parent="." unique_id=190462449]
+y_sort_enabled = true
+
+[node name="Corn" parent="." unique_id=590185909 instance=ExtResource("9_iih5a")]
+position = Vector2(135, 191)
+
+[node name="Corn2" parent="." unique_id=981401800 instance=ExtResource("9_iih5a")]
+position = Vector2(147, 222)
+
+[node name="Tomato" parent="." unique_id=1842114586 instance=ExtResource("10_pkvo6")]
+position = Vector2(180, 200)
+
+[node name="Tomato2" parent="." unique_id=1441760881 instance=ExtResource("10_pkvo6")]
+position = Vector2(182, 224)
+
 [node name="Player" parent="." unique_id=1300715306 instance=ExtResource("9_opf6v")]
 position = Vector2(165, 175)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1617326170]
+
+[node name="GameScreen" parent="." unique_id=1239767286 instance=ExtResource("12_swxut")]

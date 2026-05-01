@@ -1,14 +1,15 @@
-[gd_scene format=4 uid="uid://cnbrw8gtm506i"]
+[gd_scene format=4 uid="uid://nf4v1r1tb4do"]
 
 [ext_resource type="TileSet" uid="uid://dljyms6537hjq" path="res://tilesets/game_tile_set.tres" id="1_rp1xo"]
 [ext_resource type="PackedScene" uid="uid://dcmdr0arf5pok" path="res://sences/components/day_night_cycle_component.tscn" id="1_wu135"]
 [ext_resource type="PackedScene" uid="uid://ctlqjno1ksm3f" path="res://sences/character/player/player.tscn" id="2_5bknk"]
 [ext_resource type="PackedScene" uid="uid://cnb68cuejau0t" path="res://sences/objects/corn.tscn" id="3_f6j2p"]
 [ext_resource type="PackedScene" uid="uid://d1oecr7di53m6" path="res://sences/UI/game_screen.tscn" id="3_wu135"]
+[ext_resource type="PackedScene" uid="uid://d38lae65lujun" path="res://sences/objects/tomato.tscn" id="6_f6j2p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3te3a"]
 
-[node name="TestSenceDayandNightCycle" type="Node2D" unique_id=1889616262]
+[node name="TestSceneCrops" type="Node2D" unique_id=1889616262]
 
 [node name="DayNightCycleComponent" parent="." unique_id=83071900 instance=ExtResource("1_wu135")]
 visible = false
@@ -46,3 +47,6 @@ shape = SubResource("CircleShape2D_3te3a")
 disabled = true
 
 [node name="GameScreen" parent="." unique_id=1239767286 instance=ExtResource("3_wu135")]
+
+[node name="Tomato" parent="." unique_id=1842114586 instance=ExtResource("6_f6j2p")]
+position = Vector2(246, 112)
