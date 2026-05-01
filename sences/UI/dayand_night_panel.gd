@@ -9,7 +9,6 @@ extends Control
 
 func _ready() -> void:
 	DayAndNightCycleManager.time_tick.connect(on_time_tick)
-	
 
 
 func on_time_tick(day: int, hour: int, minute: int) -> void:
