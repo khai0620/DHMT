@@ -6,13 +6,27 @@ extends Node2D
 @export var terrain_set: int = 0
 @export var terrain: int = 3
 
-@onready var player: Player = get_tree().get_first_node_in_group("player")
+@onready var player: Player = null
 
 var mouse_position: Vector2
 var cell_position: Vector2i
 var cell_source_id: int
 var local_cell_position: Vector2
 var distance: float
+
+func _ready() -> void:
+	player = get_player()
+	if player == null:
+		push_warning("FieldCursorComponent: player node not found in the scene tree.")
+
+func get_player() -> Player:
+	var found_player = get_tree().get_first_node_in_group("player")
+	if found_player != null:
+		return found_player
+	var current_scene = get_tree().get_current_scene()
+	if current_scene != null:
+		return current_scene.find_child("Player", true, false) as Player
+	return null
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("remove_dirt"):
@@ -25,11 +39,16 @@ func _unhandled_input(event: InputEvent) -> void:
 			add_tilled_soil_cell()
 
 func get_cell_under_mouse() -> void:
+	if player == null:
+		player = get_player()
 	mouse_position = grass_tilemap_layer.get_local_mouse_position()
 	cell_position = grass_tilemap_layer.local_to_map(mouse_position)
 	cell_source_id = grass_tilemap_layer.get_cell_source_id(cell_position)
 	local_cell_position = grass_tilemap_layer.map_to_local(cell_position)
-	distance = player.global_position.distance_to(local_cell_position)
+	if player != null:
+		distance = player.global_position.distance_to(local_cell_position)
+	else:
+		distance = INF
 	
 	
 func add_tilled_soil_cell() -> void:

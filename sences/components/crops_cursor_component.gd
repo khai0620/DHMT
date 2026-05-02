@@ -3,8 +3,21 @@ extends Node
  
 @export var tilled_soil_tilemap_layer: TileMapLayer
 
-@onready var player: Player = get_tree().get_first_node_in_group("player")
+@onready var player: Player = null
 
+func _ready() -> void:
+	player = get_player()
+	if player == null:
+		push_warning("CropsCursorComponent: player node not found in the scene tree.")
+
+func get_player() -> Player:
+	var found_player = get_tree().get_first_node_in_group("player")
+	if found_player != null:
+		return found_player
+	var current_scene = get_tree().get_current_scene()
+	if current_scene != null:
+		return current_scene.find_child("Player", true, false) as Player
+	return null
 
 var corn_plant_scene = preload("res://sences/objects/corn.tscn")
 var tomato_plant_scene = preload("res://sences/objects/tomato.tscn")
@@ -27,11 +40,16 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func get_cell_under_mouse() -> void:
+	if player == null:
+		player = get_player()
 	mouse_position = tilled_soil_tilemap_layer.get_local_mouse_position()
 	cell_position = tilled_soil_tilemap_layer.local_to_map(mouse_position)
 	cell_source_id = tilled_soil_tilemap_layer.get_cell_source_id(cell_position)
 	local_cell_position = tilled_soil_tilemap_layer.map_to_local(cell_position)
-	distance = player.global_position.distance_to(local_cell_position)
+	if player != null:
+		distance = player.global_position.distance_to(local_cell_position)
+	else:
+		distance = INF
 
 func add_crop() -> void:
 	if distance < 20.0:
