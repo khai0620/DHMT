@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dwknlg54yfgr8"]
+
+[node name="DayandNightComponent" type="CanvasModulate" unique_id=1494262611]

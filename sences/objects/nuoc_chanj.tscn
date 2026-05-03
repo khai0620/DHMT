@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bh4mcwpi6lwg4"]
+
+[ext_resource type="Texture2D" uid="uid://dlw1giyjeqre6" path="res://assets/Tilesets/water.png" id="1_h264m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyjq4"]
+atlas = ExtResource("1_h264m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7x5"]
+size = Vector2(16, 16)
+
+[node name="Nuochan" type="Sprite2D" unique_id=1511037330]
+texture = SubResource("AtlasTexture_kyjq4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=265839508]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1276969218]
+shape = SubResource("RectangleShape2D_bn7x5")
