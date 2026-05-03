@@ -3,9 +3,14 @@
 [ext_resource type="Theme" uid="uid://c6ytjspjb1dd3" path="res://sences/UI/game_ui_theme.tres" id="1_1gmta"]
 [ext_resource type="Script" uid="uid://db63hyfu5jmly" path="res://sences/UI/game_menu_screen.gd" id="1_2mi6n"]
 [ext_resource type="PackedScene" uid="uid://lfejerf077c4" path="res://sences/UI/game_menu_screen_background.tscn" id="1_j0gas"]
+[ext_resource type="PackedScene" uid="uid://et6pl5oklpt" path="res://audio/nhac_nen_mixi.tscn" id="2_hnds6"]
 
 [node name="GameMenuScreen" type="CanvasLayer" unique_id=54440371]
 script = ExtResource("1_2mi6n")
+
+[node name="Nhac_nen_mixi" parent="." unique_id=1603281214 instance=ExtResource("2_hnds6")]
+volume_db = -15.0
+autoplay = true
 
 [node name="GameMenuScreenBackground" parent="." unique_id=1889616262 instance=ExtResource("1_j0gas")]
 

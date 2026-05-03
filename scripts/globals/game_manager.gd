@@ -1,6 +1,16 @@
 extends Node
 
+var game_menu_screen = preload("res://sences/UI/game_menu_screen.tscn")
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("game_menu"):
+		show_game_menu_screen()
 func start_game() -> void:
-	pass
+	SceneManager.load_main_scene_container()
+	
 func exit_game() -> void:
-	pass
+	get_tree().quit()
+
+func show_game_menu_screen() -> void:
+	var game_menu_screen_instance = game_menu_screen.instantiate()
+	get_tree().root.add_child(game_menu_screen_instance)
