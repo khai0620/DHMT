@@ -66,7 +66,7 @@ func get_cell_under_mouse() -> void:
 
 func add_crop() -> void:
 	# Nếu khoảng cách gần (< 25) và ô đó đã được cày (source_id != -1)
-	if distance < 25.0 and cell_source_id != -1:
+	if distance < 20.0 and cell_source_id != -1:
 		var crop_field = get_tree().current_scene.find_child("CropFields", true, false)
 		if crop_field == null: return
 		
@@ -86,7 +86,7 @@ func add_crop() -> void:
 			crop_field.add_child(instance)
 
 func remove_crop() -> void:
-	if distance < 25.0:
+	if distance < 20.0:
 		var crop_field = get_tree().current_scene.find_child("CropFields", true, false)
 		if crop_field == null: return
 		

@@ -60,13 +60,13 @@ func add_tilled_soil_cell() -> void:
 		return
 		
 	# Khoảng cách 25 pixel và phải click trúng vào lớp cỏ (source != -1)
-	if distance < 25.0 and cell_source_id != -1:
+	if distance < 20.0 and cell_source_id != -1:
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, terrain, true)
 
 func remove_tilled_soil_cell() -> void:
 	if tilled_soil_tilemap_layer == null: 
 		return
 		
-	if distance < 25.0:
+	if distance < 20.0:
 		# Đặt terrain về -1 để xóa ô đất cày
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, -1, true)

@@ -395,7 +395,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lxe7w"]
-radius = 4.0
+radius = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_obkv6"]
 radius = 3.0
@@ -414,7 +414,7 @@ animation = &"front"
 offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946542843]
-position = Vector2(0, -4)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_lxe7w")
 
 [node name="StateMachine" type="Node" parent="." unique_id=578385960 node_paths=PackedStringArray("initial_node_state")]
