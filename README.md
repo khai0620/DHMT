@@ -1,51 +1,24 @@
-  DHMT
-Dự án phát triển game 2D chuyên nghiệp trên nền tảng Godot Engine 4
-GIỚI THIỆU CHUNG
-DHMT là dự án mã nguồn mở tập trung vào việc xây dựng trải nghiệm game 2D tối ưu. Tận dụng sức mạnh của Godot Engine phiên bản 4.x, dự án hướng tới cấu trúc mã nguồn linh hoạt, hiệu suất cao và quy trình phát triển hiện đại, cung cấp nền tảng vững chắc cho việc mở rộng các tính năng gameplay phức tạp.
-THÔNG SỐ KỸ THUẬT (TECHNOLOGIES)
-Dự án được xây dựng trên hệ sinh thái Godot 4, tận dụng các cải tiến mới về hệ thống Tilemap và khả năng xử lý rendering 2D mạnh mẽ:
-Godot 4.x: Engine chính, cung cấp môi trường phát triển tích hợp và hiệu năng vượt trội.
-GDScript (99.3%): Ngôn ngữ lập trình hướng đối tượng chuyên dụng để xử lý logic game, đảm bảo tốc độ thực thi và khả năng bảo trì mã nguồn.
-GDShader (0.7%): Sử dụng để xây dựng các hiệu ứng hình ảnh (visual effects) và xử lý đồ họa nâng cao trực tiếp trên GPU.
-TÍNH NĂNG NỔI BẬT
-World Building: Hệ thống xây dựng bản đồ linh hoạt dựa trên Tilemap.
-Audio System: Tích hợp quản lý âm thanh môi trường và hiệu ứng tương tác.
-Visual Enhancements: Sử dụng shader tùy chỉnh để tối ưu hóa trải nghiệm thị giác.
-CẤU TRÚC THƯ MỤC (PROJECT STRUCTURE)
-Cấu trúc dự án được tổ chức theo tiêu chuẩn để quản lý tài nguyên và mã nguồn một cách khoa học:
-Thư mục/Tập tin
-Mô tả chức năng
-assets/
-Lưu trữ tài nguyên đồ họa, sprites và các texture 2D.
-audio/
-Hệ thống quản lý tệp âm thanh, nhạc nền (BGM) và hiệu ứng (SFX).
-scripts/
-Chứa mã nguồn logic xử lý đối tượng và điều khiển game (.gd).
-sences/
-Lưu trữ các cảnh (scenes) của dự án. Lưu ý: Thư mục hiện đặt tên theo typo gốc là "sences".
-tilesets/
-Quản lý tài nguyên Tilemap và các bộ gạch nền dùng cho xây dựng bản đồ.
-project.godot
-Tệp cấu hình gốc: Quản lý Autoloads, Input Map, Render settings và các thiết lập toàn cục.
-test_sence_map.tscn
-Cảnh thử nghiệm môi trường bản đồ chính, nằm tại thư mục gốc của dự án.
-.vscode/
-Cấu hình môi trường phát triển (IDE) cho Visual Studio Code.
-.editorconfig
-Quy chuẩn định dạng mã nguồn đồng nhất cho đội ngũ cộng tác.
-.gitattributes
-Định nghĩa thuộc tính đường dẫn và xử lý tệp tin cho Git.
-.gitignore
-Danh sách loại trừ các tệp tạm và tài nguyên không cần thiết khỏi quản lý phiên bản.
-icon.svg
-Tệp biểu tượng (icon) mặc định của dự án Godot.
-HƯỚNG DẪN CÀI ĐẶT (INSTALLATION)
-Để thiết lập môi trường phát triển cục bộ, vui lòng thực hiện theo các bước sau:
-Chuẩn bị: Tải và cài đặt Godot Engine phiên bản 4.x (khuyên dùng bản Stable mới nhất).
-Sao chép mã nguồn: Sử dụng lệnh git clone hoặc tải tệp ZIP của kho lưu trữ về máy tính.
-Import dự án: Khởi động Godot Engine, chọn "Import" và trỏ đến tệp project.godot trong thư mục đã tải.
-Chạy thử nghiệm: Để kiểm tra cấu trúc bản đồ và môi trường, mở tệp test_sence_map.tscn tại thư mục gốc, sau đó nhấn F6 (hoặc nút "Play Scene") để khởi chạy cảnh hiện tại.
-GHI CHÚ PHÁT TRIỂN (DEVELOPMENT NOTES)
-Với lịch sử hơn 64 commits, dự án hiện đang trong giai đoạn phát triển tích cực. Các nhà phát triển đóng góp mã nguồn bắt buộc phải tuân thủ quy chuẩn trong .editorconfig. Việc này không chỉ duy trì coding style đồng nhất mà còn giúp tránh các lỗi xung đột (conflict) không đáng có trong quá trình merge code và quản lý phiên bản.
-THÔNG TIN TÁC GIẢ & BẢN QUYỀN
-Dự án được quản lý và phát triển bởi: Nhóm 7.
+DHMT - Dự án Game 2D với Godot Engine
+DHMT là một dự án phát triển game 2D chuyên sâu được xây dựng trên nền tảng Godot Engine. Đây là một bản mô phỏng các cơ chế trò chơi (game mechanics) cốt lõi, tập trung vào việc quản lý logic thông qua hệ thống Node và các kịch bản Resource tùy chỉnh. Dự án đóng vai trò như một môi trường thử nghiệm để triển khai các kỹ thuật xây dựng bản đồ (mapping) và xử lý tương tác vật lý trong không gian hai chiều.
+Thông tin Kỹ thuật (Technical Stack)
+Dưới đây là chi tiết các ngôn ngữ lập trình được sử dụng, dựa trên phân tích dữ liệu từ repository:
+GDScript (99.3%): Ngôn ngữ chính dùng để điều khiển logic trò chơi, quản lý Scene instantiation và xử lý tín hiệu (signals) giữa các Node.
+GDShader (0.7%): Được sử dụng để viết các mã nguồn Shader tùy chỉnh, phục vụ cho việc xử lý hiệu ứng hình ảnh (Visual Effects) hoặc vật liệu (Materials) đặc thù trong game.
+Dự án được cấu hình và tối ưu hóa hoàn toàn cho môi trường Godot Engine (được xác nhận qua tệp cấu hình cốt lõi project.godot).
+Cấu trúc Thư mục (Project Structure)
+Hệ thống cây thư mục được tổ chức theo tiêu chuẩn của Godot để quản lý hiệu quả các Scene và Resource:
+assets/: Chứa các tài nguyên đồ họa thô (Textures, Sprites) phục vụ giao diện và nhân vật.
+scripts/: Nơi lưu trữ các tệp mã nguồn logic (.gd) được gắn vào các Node để điều khiển hành vi đối tượng.
+sences/: Chứa các cảnh (Scenes) của game. Lưu ý kỹ thuật: Tên thư mục này hiện đang sử dụng định danh "sences" thay vì "scenes". Người dùng tuyệt đối không được đổi tên thư mục này để tránh làm gãy các đường dẫn nội bộ (internal paths) trong dự án.
+tilesets/: Chứa các bộ gạch (TileSets) và cấu hình AutoTile để xây dựng môi trường bản đồ một cách nhanh chóng.
+audio/: Lưu trữ các tệp âm thanh (Sound Effects) và nhạc nền (Background Music).
+.vscode/ & .editorconfig: Các tệp cấu hình môi trường phát triển, cho thấy dự án đã được tối ưu hóa để làm việc tốt nhất trên trình soạn thảo Visual Studio Code.
+Các tệp tin quan trọng tại thư mục gốc:
+project.godot: Tệp cấu hình tổng thể của dự án (Project Settings), định nghĩa cửa sổ, lớp va chạm và các biến môi trường.
+test_sence_map.tscn: Một tệp Text-based Scene (định dạng cảnh dưới dạng văn bản) đại diện cho bản đồ thử nghiệm, được sử dụng để kiểm tra việc instantiation các Node và Layout bản đồ.
+Hướng dẫn Cài đặt & Sử dụng Cơ bản
+Để thiết lập môi trường phát triển và chạy thử dự án DHMT, vui lòng thực hiện theo các bước sau:
+Tải xuống mã nguồn hoặc sử dụng Git để Clone repository này về máy cục bộ.
+Tải và cài đặt Godot Engine. Do cấu trúc dự án có thể tương thích với các phiên bản khác nhau, bạn nên kiểm tra tệp project.godot để xác định phiên bản chính xác hoặc sử dụng phiên bản Godot 4.x/3.x LTS mới nhất để đảm bảo tính ổn định.
+Mở Godot Engine, nhấn vào nút "Import", điều hướng đến thư mục dự án và chọn tệp project.godot.
+Sau khi giao diện biên tập mở ra, nhấn nút "Edit" để truy cập vào cây đối tượng (Node tree). Nhấn phím F5 (hoặc nút Play ở góc trên bên phải) để khởi chạy Scene mặc định và trải nghiệm game.
