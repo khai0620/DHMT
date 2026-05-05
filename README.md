@@ -1,5 +1,6 @@
 Dự án phát triển game 2D cơ bản trên nền tảng Godot Engine 4
 
+
 GIỚI THIỆU CHUNG
 
 DHMT là dự án mã nguồn mở tập trung vào việc xây dựng trải nghiệm game 2D tối ưu. Tận dụng sức mạnh của Godot Engine phiên bản 4.x, dự án hướng tới cấu trúc mã nguồn linh hoạt, hiệu suất cao và quy trình phát triển hiện đại, cung cấp nền tảng vững chắc cho việc mở rộng các tính năng gameplay phức tạp.
@@ -70,15 +71,22 @@ Quy chuẩn định dạng mã nguồn đồng nhất cho đội ngũ cộng tá
 .gitignore
 
 Danh sách loại trừ các tệp tạm và tài nguyên không cần thiết khỏi quản lý phiên bản.
+  
 icon.svg
+
 Tệp biểu tượng (icon) mặc định của dự án Godot.
+
+
 HƯỚNG DẪN CÀI ĐẶT (INSTALLATION)
+
 Để thiết lập môi trường phát triển cục bộ, vui lòng thực hiện theo các bước sau:
+
 Chuẩn bị: Tải và cài đặt Godot Engine phiên bản 4.x (khuyên dùng bản Stable mới nhất).
 Sao chép mã nguồn: Sử dụng lệnh git clone hoặc tải tệp ZIP của kho lưu trữ về máy tính.
 Import dự án: Khởi động Godot Engine, chọn "Import" và trỏ đến tệp project.godot trong thư mục đã tải.
 Chạy thử nghiệm: Để kiểm tra cấu trúc bản đồ và môi trường, mở tệp test_sence_map.tscn tại thư mục gốc, sau đó nhấn F6 (hoặc nút "Play Scene") để khởi chạy cảnh hiện tại.
+
+
 GHI CHÚ PHÁT TRIỂN (DEVELOPMENT NOTES)
 Với lịch sử hơn 64 commits, dự án hiện đang trong giai đoạn phát triển tích cực. Các nhà phát triển đóng góp mã nguồn bắt buộc phải tuân thủ quy chuẩn trong .editorconfig. Việc này không chỉ duy trì coding style đồng nhất mà còn giúp tránh các lỗi xung đột (conflict) không đáng có trong quá trình merge code và quản lý phiên bản.
-THÔNG TIN TÁC GIẢ & BẢN QUYỀN
-Dự án được quản lý và phát triển bởi: khai0620.
+
