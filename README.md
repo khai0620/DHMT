@@ -1,4 +1,6 @@
 DHMT - Dự án Game 2D với Godot Engine
+
+
 DHMT là một dự án phát triển game 2D chuyên sâu được xây dựng trên nền tảng Godot Engine. Đây là một bản mô phỏng các cơ chế trò chơi (game mechanics) cốt lõi, tập trung vào việc quản lý logic thông qua hệ thống Node và các kịch bản Resource tùy chỉnh. Dự án đóng vai trò như một môi trường thử nghiệm để triển khai các kỹ thuật xây dựng bản đồ (mapping) và xử lý tương tác vật lý trong không gian hai chiều.
 Thông tin Kỹ thuật (Technical Stack)
 Dưới đây là chi tiết các ngôn ngữ lập trình được sử dụng, dựa trên phân tích dữ liệu từ repository:
